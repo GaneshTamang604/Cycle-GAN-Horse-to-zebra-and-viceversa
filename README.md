@@ -28,7 +28,7 @@ The first component of the generator's loss we're going to implement is its adve
 You'll want to measure the change in an image when you pass the generator an example from the target domain instead of the input domain it's expecting. The output should be the same as the input since it is already of the target domain class. For example, if you put a horse through a zebra -> horse generator, you'd expect the output to be the same horse because nothing needed to be transformed. It's already a horse! You don't want your generator to be transforming it into any other thing, so you want to encourage this behavior. In encouraging this identity mapping, the authors of CycleGAN found that for some tasks, this helped properly preserve the colors of an image, even when the expected input (here, a zebra) was put in. This was particularly useful for the photos <-> paintings mapping and, while an optional aesthetic component, you might find it useful for your applications down the line.
 
 
-![Diagram showing a real horse image going through a zebra -> horse generator and the ideal output being the same input image](../images/Identity_Loss.png)
+![Diagram showing a real horse image going through a zebra -> horse generator and the ideal output being the same input image](./images/Identity_Loss.png)
 
 #### Cycle Consistency Loss
 This is used to ensure that when we put an image through one generator, that if it is then transformed back into the input class using the opposite generator, the image is the same as the original input image.
