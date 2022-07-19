@@ -2,6 +2,10 @@
 
 In this notebook, we will write a generative model based on the paper Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks by Zhu et al. 2017, commonly referred to as CycleGAN.
 
+
+![](./images/cyclegan.png)
+
+
 ## Generator
 The code for a CycleGAN generator is much like Pix2Pix's U-Net with the addition of the residual block between the encoding (contracting) and decoding (expanding) blocks.
 
